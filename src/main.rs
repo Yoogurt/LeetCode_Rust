@@ -1,12 +1,16 @@
-use LeetCodeBase::list_node::{list_node_of, ListNodesFomatter};
+mod code_100;
+mod code_101;
+mod code_102;
+mod code_66;
+mod code_70;
+mod code_71;
+mod code_76;
+mod code_78;
+mod code_98;
+mod code_383;
+mod code_606;
 
-mod code_1;
-mod code_2;
-mod code_3;
-mod code_5;
-
-struct Solution {}
+struct Solution;
 
 fn main() {
-    print!("{}", Solution::longest_palindrome("asdnabbanfsfd".to_string()))
 }

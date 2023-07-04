@@ -1,5 +1,4 @@
-use std::borrow::BorrowMut;
-use std::fmt::{Display, Error, Formatter, Write};
+use std::fmt::{Display, Formatter};
 use std::slice::Iter;
 use std::vec::Vec;
 
@@ -44,10 +43,10 @@ pub fn list_node_of(values: Vec<i32>) -> Option<Box<ListNode>> {
     }
 
     let iter = &mut values.iter();
-    return recListNodeOf(iter);
+    return rec_list_node_of(iter);
 }
 
-fn recListNodeOf(iter: &mut Iter<i32>) -> Option<Box<ListNode>> {
+fn rec_list_node_of(iter: &mut Iter<i32>) -> Option<Box<ListNode>> {
     let next = iter.next();
 
     match next {
@@ -57,7 +56,7 @@ fn recListNodeOf(iter: &mut Iter<i32>) -> Option<Box<ListNode>> {
         Some(&val) => {
             Some(Box::new(ListNode {
                 val,
-                next: recListNodeOf(iter),
+                next: rec_list_node_of(iter),
             }))
         }
     }
