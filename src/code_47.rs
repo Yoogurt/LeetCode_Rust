@@ -1,4 +1,3 @@
-use std::ffi::c_double;
 use crate::Solution;
 
 impl Solution {
