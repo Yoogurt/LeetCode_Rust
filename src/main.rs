@@ -30,6 +30,7 @@ mod code_46;
 mod code_47;
 mod code_104;
 mod code_518;
+mod code_232;
 
 struct Solution;
 

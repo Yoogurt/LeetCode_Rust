@@ -1,7 +1,7 @@
 use std::{cell::RefCell, rc::Rc};
 
 use Base::{
-    tree_node::{self, TreeNode},
+    tree_node::*,
     tree_node_of,
 };
 

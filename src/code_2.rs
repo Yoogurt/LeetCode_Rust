@@ -29,16 +29,15 @@ impl Solution {
                 }
                 borrowed_result = mut_list_node.next.as_mut();
             }
-            //
+
             let unwrap_l1 = l1.unwrap();
             let unwrap_l2 = l2.unwrap();
 
-            let ret = (unwrap_l1.val + unwrap_l2.val + carry);
-            //
+            let ret = unwrap_l1.val + unwrap_l2.val + carry;
+
             borrowed_result.as_mut().unwrap().val = ret % 10;
-            //
             carry = ret / 10;
-            //
+
             l1 = unwrap_l1.next;
             l2 = unwrap_l2.next;
         }
@@ -56,7 +55,7 @@ impl Solution {
 
             let unwrap_l1 = l1.unwrap();
 
-            let ret = (unwrap_l1.val + carry);
+            let ret = unwrap_l1.val + carry;
             //
             borrowed_result.as_mut().unwrap().val = ret % 10;
 
@@ -78,7 +77,7 @@ impl Solution {
 
             let unwrap_l2 = l2.unwrap();
 
-            let ret = (unwrap_l2.val + carry);
+            let ret = unwrap_l2.val + carry;
             //
             borrowed_result.as_mut().unwrap().val = ret % 10;
 
