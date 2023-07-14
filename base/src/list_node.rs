@@ -2,6 +2,7 @@ use std::fmt::{Display, Formatter};
 use std::slice::Iter;
 use std::vec::Vec;
 
+#[derive(Debug)]
 pub struct ListNode {
     pub val: i32,
     pub next: Option<Box<ListNode>>,
@@ -13,6 +14,12 @@ impl ListNode {
             val,
             next: None,
         }
+    }
+}
+
+impl PartialEq for ListNode {
+    fn eq(&self, other: &Self) -> bool {
+        self.val == other.val && self.next == other.next
     }
 }
 
@@ -37,7 +44,7 @@ fn format_list_node(f: &mut Formatter<'_>, list_node: &Option<Box<ListNode>>) ->
     return format_list_node(f, &b_l.next);
 }
 
-pub fn list_node_of(values: Vec<i32>) -> Option<Box<ListNode>> {
+pub fn list_node_of_vec(values: Vec<i32>) -> Option<Box<ListNode>> {
     if values.is_empty() {
         return None;
     }
@@ -60,4 +67,13 @@ fn rec_list_node_of(iter: &mut Iter<i32>) -> Option<Box<ListNode>> {
             }))
         }
     }
+}
+
+#[macro_export]
+macro_rules! list_node_of {
+    [$($x:expr),*] => {
+        {
+            list_node_of_vec(vec![$($x),*])
+        }
+    };
 }
