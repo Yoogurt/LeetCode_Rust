@@ -1,3 +1,5 @@
+use std::cell::RefCell;
+
 mod code_100;
 mod code_101;
 mod code_102;
@@ -39,7 +41,18 @@ mod code_520;
 mod code_657;
 mod code_203;
 mod code_179;
+mod code_319;
+mod code_946;
 
 struct Solution;
 
-fn main() {}
+struct A {}
+
+impl A {
+    fn test(this: &RefCell<Self>) {
+
+    }
+}
+
+fn main() {
+}
