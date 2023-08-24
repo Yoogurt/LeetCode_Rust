@@ -43,6 +43,9 @@ mod code_203;
 mod code_179;
 mod code_319;
 mod code_946;
+mod code_246;
+mod code_509;
+mod code_800;
 
 struct Solution;
 
