@@ -1,7 +1,7 @@
 use crate::Solution;
 
 impl Solution {
-    pub fn max_sub_array(nums: Vec<i32>) -> i32 {
+    pub fn max_sub_array_2(nums: Vec<i32>) -> i32 {
         if nums.is_empty() {
             return 0;
         }
@@ -17,7 +17,7 @@ impl Solution {
         result
     }
 }
-#[test]
-fn test_code_1617() {
-    println!("{}", Solution::max_sub_array(vec![-2,1,-3,4,-1,2,1,-5,4]));
-}
+// #[test]
+// fn test_code_1617() {
+//     println!("{}", Solution::max_sub_array(vec![-2,1,-3,4,-1,2,1,-5,4]));
+// }
