@@ -1,6 +1,6 @@
+mod code_100;
 mod bag;
 mod code_1;
-mod code_100;
 mod code_1005;
 mod code_101;
 mod code_102;
@@ -63,6 +63,9 @@ mod code_78;
 mod code_797;
 mod code_91;
 mod code_946;
+mod code_246;
+mod code_509;
+mod code_800;
 mod code_98;
 mod code_14;
 mod code_157;
