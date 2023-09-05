@@ -1,9 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
-use Base::{
-    tree_node::*,
-    tree_node_of,
-};
+use Base::{tree_node::*, tree_node_of};
 
 use crate::Solution;
 

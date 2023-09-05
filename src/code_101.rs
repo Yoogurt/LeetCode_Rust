@@ -1,10 +1,7 @@
 use std::cell::RefCell;
 use std::rc::Rc;
 
-use Base::{
-    tree_node::{self, TreeNode},
-    tree_node_of,
-};
+use Base::{tree_node::{TreeNode}, tree_node_of};
 
 use crate::Solution;
 impl Solution {

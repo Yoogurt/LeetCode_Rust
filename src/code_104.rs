@@ -10,7 +10,7 @@ impl Solution {
             return 0;
         }
 
-        let mut rc = root.unwrap();
+        let rc = root.unwrap();
         let rc = rc.borrow();
         return max(Solution::max_depth(rc.left.clone()), Solution::max_depth(rc.right.clone())) + 1;
     }

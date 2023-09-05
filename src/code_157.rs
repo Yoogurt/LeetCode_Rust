@@ -17,7 +17,7 @@ impl Solution {
         0
     }
 
-    fn read4(&self, buf4: &mut [char]) -> i32 {
+    fn read4(&self, _buf4: &mut [char]) -> i32 {
         return 1;
     }
 }

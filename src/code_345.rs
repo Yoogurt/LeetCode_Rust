@@ -10,7 +10,7 @@ impl Solution {
             acc | (1 << (value as i32 - 'a' as i32))
         }); 
 
-        let a = vowels & (1 << (s[left_index] as i32 - 'a' as i32)) == 0;
+        let _a = vowels & (1 << (s[left_index] as i32 - 'a' as i32)) == 0;
 
         while left_index < right_index {
             if vowels & (1 << (s[left_index] as i32 - 'a' as i32)) == 0 {

@@ -4,7 +4,7 @@ impl Solution {
     fn next((last_x, last_y): (i32, i32),
             (x, y): (i32, i32),
             path: &Vec<Vec<i32>>) -> (i32, i32) {
-        let mut next = match path[y as usize][x as usize] {
+        let next = match path[y as usize][x as usize] {
             1 => {
                 if last_y != y {
                     (-1, -1)

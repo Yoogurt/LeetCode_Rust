@@ -89,6 +89,12 @@ mod code_111;
 mod code_209;
 mod code_216;
 mod code_226;
+mod code_236;
+mod code_257;
+mod code_283;
+mod code_337;
+mod code_2605;
+mod code_343;
 
 #[warn(dead_code)]
 struct Solution;

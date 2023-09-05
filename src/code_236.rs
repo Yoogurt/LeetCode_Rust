@@ -1,14 +1,31 @@
-use std::cell::RefCell;
-use std::rc::Rc;
-use Base::tree_node::TreeNode;
-use Base::tree_node_of;
 
+//leetcode submit region begin(Prohibit modification and deletion)
+// Definition for a binary tree node.
+// #[derive(Debug, PartialEq, Eq)]
+// pub struct TreeNode {
+//   pub val: i32,
+//   pub left: Option<Rc<RefCell<TreeNode>>>,
+//   pub right: Option<Rc<RefCell<TreeNode>>>,
+// }
+//
+// impl TreeNode {
+//   #[inline]
+//   pub fn new(val: i32) -> Self {
+//     TreeNode {
+//       val,
+//       left: None,
+//       right: None
+//     }
+//   }
+// }
+use std::rc::Rc;
+use std::cell::RefCell;
+use Base::tree_node::TreeNode;
 use crate::Solution;
 
 impl Solution {
-    pub fn lowest_common_ancestor_2(root: Option<Rc<RefCell<TreeNode>>>,
-                                  p: Option<Rc<RefCell<TreeNode>>>,
-                                  q: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn lowest_common_ancestor(root: Option<Rc<RefCell<TreeNode>>>, p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+
         match root.clone() {
             None => { return None; }
             Some(tree_node) => {
@@ -44,11 +61,4 @@ impl Solution {
             }
         }
     }
-}
-
-#[test]
-fn test_code_235() {
-    println!("{:?}", Solution::lowest_common_ancestor(tree_node_of![1,2,3,4,5,6,7,8,9],
-                                                      tree_node_of![4],
-                                                      tree_node_of![3]).unwrap().borrow().val);
 }

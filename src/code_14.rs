@@ -9,7 +9,7 @@ impl Solution {
         }
 
         let mut result = String::new();
-        let mut chars = strs.iter().map(|value| value.chars().collect::<Vec<_>>()).collect::<Vec<_>>();
+        let chars = strs.iter().map(|value| value.chars().collect::<Vec<_>>()).collect::<Vec<_>>();
 
         if chars[0].is_empty() {
             return String::default();
