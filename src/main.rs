@@ -100,17 +100,11 @@ mod code_91;
 mod code_946;
 mod code_98;
 mod code_494;
+mod code_2283;
+mod code_222;
 
 #[warn(dead_code)]
 struct Solution;
-use Base::my_memcpy::my_memcpy;
 
 fn main() {
-    let mut dst = [0; 10];
-    let mut source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    unsafe {
-        my_memcpy(dst.as_mut_ptr(), source.as_ptr(), 10);
-    }
-
-    println!("{:?}", dst);
 }
