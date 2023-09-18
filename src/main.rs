@@ -1,5 +1,3 @@
-use Base::into_vec::IntoVec;
-
 mod bag;
 mod code_1;
 mod code_100;
@@ -105,6 +103,18 @@ mod code_494;
 mod code_1971;
 mod code_2596;
 mod code_48;
+mod code_63;
+mod code_64;
+mod code_67;
+mod code_73;
+mod code_95;
+mod code_113;
+mod code_120;
+mod code_163;
+mod code_lcp_50;
+mod code_680;
+mod code_696;
+mod code_709;
 
 #[warn(dead_code)]
 struct Solution;
