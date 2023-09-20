@@ -14,10 +14,10 @@ impl Solution {
             let flag2_index = value[1] as usize;
             let flag2 = result[flag2_index];
 
-            result[flag1_index] = result[flag1_index] | VISIT;
+            result[flag1_index] |= VISIT;
 
             result[flag2_index] = result[flag2_index] | VISIT | IN;
-            return flag1 & VISIT == 0 || flag2 & VISIT == 0;
+            flag1 & VISIT == 0 || flag2 & VISIT == 0
         }) && result.iter().all(|value| *value & VISIT != 0)
             && result.iter().filter(|value| *value & IN == 0).count() == 1
     }

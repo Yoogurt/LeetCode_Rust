@@ -18,7 +18,7 @@ impl Solution {
             return "".to_string();
         }
 
-        return data[(left_index + 1) as usize ..= (right_index - 1) as usize].iter().collect();
+        data[(left_index + 1) as usize ..= (right_index - 1) as usize].iter().collect()
     }
 
     fn single_palindrome_length_of(data: &Vec<char>, index: i32) -> String {
@@ -34,7 +34,7 @@ impl Solution {
             }
         }
 
-        return data[(left_index + 1) as usize ..= (right_index - 1) as usize].iter().collect();
+        data[(left_index + 1) as usize ..= (right_index - 1) as usize].iter().collect()
     }
 
     pub fn longest_palindrome(s: String) -> String {
@@ -45,16 +45,16 @@ impl Solution {
             {
                 let single_palindrome_length =  Solution::single_palindrome_length_of(&data, index as i32);
                 if single_palindrome_length.len() > result.len() {
-                    result = String::from(single_palindrome_length);
+                    result = single_palindrome_length;
                 }
 
                 let double_palindrome_length =  Solution::double_palindrome_length_of(&data, index as i32);
                 if double_palindrome_length.len() > result.len() {
-                    result = String::from(double_palindrome_length);
+                    result = double_palindrome_length;
                 }
             }
         }
 
-        return result;
+        result
     }
 }

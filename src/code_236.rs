@@ -27,7 +27,7 @@ impl Solution {
     pub fn lowest_common_ancestor(root: Option<Rc<RefCell<TreeNode>>>, p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
 
         match root.clone() {
-            None => { return None; }
+            None => {  None }
             Some(tree_node) => {
                 let left = Solution::lowest_common_ancestor(tree_node.borrow().left.clone(), p.clone(), q.clone());
                 let right = Solution::lowest_common_ancestor(tree_node.borrow().right.clone(), p.clone(), q.clone());

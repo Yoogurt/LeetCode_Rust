@@ -21,6 +21,6 @@ impl Solution {
     pub fn combination_sum(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let mut result = Vec::<Vec<i32>>::new();
         Solution::combination(&candidates, 0, &mut Vec::<i32>::new(), 0, target, &mut result);
-        return result;
+        result
     }
 }

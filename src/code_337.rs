@@ -23,7 +23,7 @@ impl Solution {
     pub fn rob_2(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         let result = Solution::rob_internal(root);
 
-        return result.0.max(result.1);
+        result.0.max(result.1)
     }
 }
 

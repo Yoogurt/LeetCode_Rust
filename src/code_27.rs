@@ -17,6 +17,6 @@ impl Solution {
             index += 1;
         }
 
-        return place_index as i32;
+        place_index as i32
     }
 }

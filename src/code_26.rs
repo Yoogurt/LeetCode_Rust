@@ -22,6 +22,6 @@ impl Solution {
             index += 1;
         }
 
-        return replace_index as i32;
+        replace_index as i32
     }
 }

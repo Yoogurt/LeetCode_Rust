@@ -13,7 +13,7 @@ impl Solution {
             lighting_count += 1;
         }
 
-        return lighting_count - 1;
+        lighting_count - 1
     }
 }
 

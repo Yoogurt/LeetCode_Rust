@@ -35,6 +35,6 @@ impl Solution {
 
         Solution::permute_unique_internal(&mut nums, &mut vec![], &mut result);
 
-        return result;
+        result
     }
 }

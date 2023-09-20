@@ -24,6 +24,6 @@ impl Solution {
         let mut result = Vec::<Vec<i32>>::new();
         let mut nums = nums;
         Solution::permute_internal(&mut nums, &mut Vec::<i32>::new(), &mut result);
-        return result;
+        result
     }
 }

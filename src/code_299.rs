@@ -13,14 +13,11 @@ impl Solution {
         guess.chars().for_each(|char| {
             let contain_key = hash_table.get_mut(&char);
 
-            match contain_key {
-                Some(count) => {
-                    if count > &mut 0 {
-                        cow += 1;
-                        *count -= 1;
-                    }
+            if let Some(count) = contain_key {
+                if count > &mut 0 {
+                    cow += 1;
+                    *count -= 1;
                 }
-                _ => {}
             }
         });
 
@@ -34,7 +31,7 @@ impl Solution {
                 }
             });
 
-        return std::format!("{}A{}B", bull, std::cmp::max(0, cow - bull));
+        std::format!("{}A{}B", bull, std::cmp::max(0, cow - bull))
     }
 }
 

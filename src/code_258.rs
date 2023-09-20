@@ -10,7 +10,7 @@ impl Solution {
             return 9;
         }
 
-        return num - num / 9 * 9;
+        num - num / 9 * 9
     }
 }
 

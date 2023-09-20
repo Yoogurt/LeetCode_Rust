@@ -9,7 +9,7 @@ impl Solution {
 
         let mut min_length = Vec::<i32>::with_capacity(nums.len());
         min_length.resize_with(nums.len(), ||{
-            return -1;
+            -1
         });
         min_length[0] = 0;
 

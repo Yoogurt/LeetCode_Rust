@@ -2,7 +2,7 @@ use crate::Solution;
 
 impl Solution {
     fn byte_order(byte: u8) -> usize {
-        return byte as usize - 'A' as usize;
+        byte as usize - 'A' as usize
     }
 
     pub fn can_construct(ransom_note: String, magazine: String) -> bool {

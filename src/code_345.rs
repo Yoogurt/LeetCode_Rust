@@ -31,7 +31,7 @@ impl Solution {
             right_index -= 1;
         }
 
-        return String::from_iter(s);
+        String::from_iter(s)
     }
 }
 

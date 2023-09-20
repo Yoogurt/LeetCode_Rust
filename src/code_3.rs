@@ -28,6 +28,6 @@ impl Solution {
             }
         }
 
-        return longest as i32;
+        longest as i32
     }
 }

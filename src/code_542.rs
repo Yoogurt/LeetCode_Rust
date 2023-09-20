@@ -10,7 +10,7 @@ impl Solution {
         });
 
         fn index_value(data: &Vec<Vec<i32>>, (x, y): (usize, usize)) -> i32 {
-            if (0..data.len()).contains(&(x as usize))
+            if (0..data.len()).contains(&x)
                 && (0..data.first().unwrap().len()).contains(&y)
             {
                 data[x][y]
@@ -100,7 +100,7 @@ impl Solution {
             wait_for_visit_index = next_visit_index;
         }
 
-        return result;
+        result
     }
 }
 

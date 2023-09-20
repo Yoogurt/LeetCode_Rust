@@ -3,7 +3,7 @@ use crate::Solution;
 impl Solution {
 
     fn letter_is_upper(char: u8) -> bool {
-        char >= 'A' as u8 && char <= 'Z' as u8
+        (b'A'..=b'Z').contains(&char)
     }
 
     pub fn detect_capital_use(word: String) -> bool {
@@ -17,9 +17,7 @@ impl Solution {
 
         let require_all_upper = if first_letter_upper_case && second_letter_upper_case {
             true
-        } else if first_letter_upper_case && !second_letter_upper_case {
-            false
-        } else if !first_letter_upper_case && !second_letter_upper_case {
+        } else if !second_letter_upper_case {
             false
         } else {
             return false;

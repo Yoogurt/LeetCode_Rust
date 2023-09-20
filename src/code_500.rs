@@ -3,7 +3,7 @@ use crate::Solution;
 impl Solution {
     pub fn find_words(words: Vec<String>) -> Vec<String> {
         fn char_shift(char: u8) -> i32 {
-            return 1 << (char - 'a' as u8);
+            1 << (char - b'a')
         }
 
         let line_one = "qwertyuiop"
@@ -20,11 +20,11 @@ impl Solution {
             .fold(0i32, |acc, char| acc | char_shift(*char));
 
         fn to_upper(char: u8) -> u8 {
-            if char <= 'Z' as u8 {
-                return char - 'A' as u8 + 'a' as u8;
+            if char <= b'Z' {
+                return char - b'A' + b'a';
             }
 
-            return char;
+            char
         }
 
         words
