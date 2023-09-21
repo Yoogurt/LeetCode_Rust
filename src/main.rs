@@ -119,6 +119,13 @@ mod code_2283;
 mod code_222;
 mod code_1108;
 mod code_97;
+mod code_1134;
+mod code_1118;
+mod code_1119;
+mod code_1133;
+mod code_1228;
+mod code_1232;
+mod code_1243;
 
 #[warn(dead_code)]
 struct Solution;
