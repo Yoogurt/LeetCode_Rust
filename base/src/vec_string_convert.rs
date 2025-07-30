@@ -1,9 +1,9 @@
 pub trait Vec2OwnedString {
-    fn to_owned_string(&self) -> Vec<String>;
+    fn to_owned_string(self) -> Vec<String>;
 }
 
-impl Vec2OwnedString for Vec<&str> {
-    fn to_owned_string(&self) -> Vec<String> {
-        return self.iter().map(|value| (*value).to_owned()).collect::<Vec<_>>()
+impl<'a, F> Vec2OwnedString for F where F: IntoIterator<Item=&'a str> {
+    fn to_owned_string(self) -> Vec<String> {
+        self.into_iter().map(|value| (*value).to_owned()).collect::<Vec<_>>()
     }
 }
